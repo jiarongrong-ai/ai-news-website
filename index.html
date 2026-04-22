@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 新闻 - 2026年4月22日</title>
+    <style>
+        :root {
+            --apple-blue: #0071e3;
+            --apple-gray: #f5f5f7;
+            --apple-text: #1d1d1f;
+            --apple-text-secondary: #86868b;
+            --apple-card-bg: #ffffff;
+            --apple-border: #d2d2d7;
+            --apple-shadow: rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: var(--apple-gray);
+            color: var(--apple-text);
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        header {
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 56px;
+            line-height: 1.07143;
+            font-weight: 700;
+            letter-spacing: -0.005em;
+            margin-bottom: 12px;
+            color: var(--apple-text);
+        }
+
+        .date {
+            font-size: 21px;
+            line-height: 1.381;
+            font-weight: 400;
+            color: var(--apple-text-secondary);
+            letter-spacing: 0.011em;
+        }
+
+        .search-section {
+            margin-bottom: 60px;
+        }
+
+        .search-container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 3.3rem;
+            padding: 0 16px 0 44px;
+            font-size: 17px;
+            line-height: 1.23536;
+            font-weight: 400;
+            letter-spacing: -.022em;
+            border-radius: 12px;
+            border: 1px solid var(--apple-border);
+            background-color: var(--apple-card-bg);
+            color: var(--apple-text);
+            box-shadow: 0 2px 8px var(--apple-shadow);
+            transition: all 0.2s ease;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%2386868b' d='M15.2 13.8l-3.4-3.4c.8-1 1.2-2.3 1.2-3.7 0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6c1.4 0 2.7-.4 3.7-1.2l3.4 3.4c.2.2.5.3.8.3s.6-.1.8-.3c.4-.4.4-1 0-1.4zM7 11c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: 16px center;
+            background-size: 16px;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--apple-blue);
+            box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .news-card {
+            background-color: var(--apple-card-bg);
+            border-radius: 18px;
+            padding: 30px;
+            box-shadow: 0 4px 20px var(--apple-shadow);
+            transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .news-card.featured {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #0071e3 0%, #2997ff 100%);
+            color: white;
+        }
+
+        .news-card.featured .news-meta {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .news-card.featured .news-source {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .news-card.featured .news-title {
+            color: white;
+        }
+
+        .news-card.featured .news-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .news-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            color: var(--apple-text-secondary);
+            font-size: 14px;
+            line-height: 1.42859;
+            font-weight: 400;
+            letter-spacing: -0.016em;
+        }
+
+        .news-source {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            background-color: rgba(0, 113, 227, 0.1);
+            color: var(--apple-blue);
+            font-size: 12px;
+            line-height: 1.33337;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        .news-title {
+            font-size: 24px;
+            line-height: 1.25;
+            font-weight: 600;
+            letter-spacing: 0.004em;
+            margin-bottom: 12px;
+            color: var(--apple-text);
+        }
+
+        .news-description {
+            font-size: 17px;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            color: var(--apple-text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--apple-border);
+            color: var(--apple-text-secondary);
+            font-size: 14px;
+            line-height: 1.42859;
+            letter-spacing: -0.016em;
+        }
+
+        @media only screen and (max-width: 734px) {
+            h1 {
+                font-size: 40px;
+                line-height: 1.1;
+            }
+
+            .date {
+                font-size: 19px;
+                line-height: 1.4211;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .news-card.featured {
+                grid-column: span 1;
+            }
+
+            .news-card {
+                padding: 24px;
+            }
+
+            .news-title {
+                font-size: 21px;
+                line-height: 1.28577;
+            }
+
+            .news-description {
+                font-size: 16px;
+                line-height: 1.42859;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --apple-gray: #000000;
+                --apple-text: #f5f5f7;
+                --apple-text-secondary: #a1a1a6;
+                --apple-card-bg: #1c1c1e;
+                --apple-border: #38383a;
+                --apple-shadow: rgba(0, 0, 0, 0.3);
+            }
+
+            .news-source {
+                background-color: rgba(0, 113, 227, 0.2);
+            }
+
+            .search-input {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23a1a1a6' d='M15.2 13.8l-3.4-3.4c.8-1 1.2-2.3 1.2-3.7 0-3.3-2.7-6-6-6s-6 2.7-6 6 2.7 6 6 6c1.4 0 2.7-.4 3.7-1.2l3.4 3.4c.2.2.5.3.8.3s.6-.1.8-.3c.4-.4.4-1 0-1.4zM7 11c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z'/%3E%3C/svg%3E");
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI 新闻</h1>
+            <p class="date">2026年4月22日</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="搜索新闻..."
+                    onkeyup="searchNews()"
+                >
+            </div>
+        </section>
+
+        <main class="news-grid" id="newsGrid">
+            <div class="news-card featured">
+                <div class="news-meta">
+                    <span class="news-source">OpenAI</span>
+                    <time>09:30</time>
+                </div>
+                <h2 class="news-title">GPT-5 预览版正式发布，推理能力提升 50%，支持 100 万 token 上下文</h2>
+                <p class="news-description">OpenAI 今日发布 GPT-5 预览版本，在数学推理、代码生成、多模态理解等方面实现重大突破，上下文窗口扩展至 100 万 token，可一次性处理完整的代码库或长篇书籍内容。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">DeepMind</span>
+                    <time>08:15</time>
+                </div>
+                <h2 class="news-title">AlphaFold 3 发布，精准预测蛋白质复合物结构，加速药物研发进程</h2>
+                <p class="news-description">DeepMind 推出新一代蛋白质结构预测模型 AlphaFold 3，可精准预测蛋白质-配体复合物结构，准确率提升 40%，将大幅加速新药研发速度，降低研发成本。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">Anthropic</span>
+                    <time>10:00</time>
+                </div>
+                <h2 class="news-title">Claude 3.5 Opus 发布，支持 200 万 token 上下文，价格降低 40%</h2>
+                <p class="news-description">Anthropic 发布 Claude 3.5 Opus 大模型，上下文窗口扩展至 200 万 token，性能提升 25%，同时 API 价格下调 40%，进一步降低企业使用门槛。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">Meta</span>
+                    <time>11:20</time>
+                </div>
+                <h2 class="news-title">Llama 4 正式开源，70B 参数完全可商用，性能比肩 GPT-4</h2>
+                <p class="news-description">Meta 今日开源 Llama 4 系列大模型，包括 7B、13B、70B 三个版本，全部支持商业使用，70B 版本性能达到 GPT-4 水平，将进一步推动大模型民主化进程。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">字节跳动</span>
+                    <time>14:00</time>
+                </div>
+                <h2 class="news-title">豆包 4.5 发布，中文理解能力超越 GPT-4，性价比提升 300%</h2>
+                <p class="news-description">字节跳动发布新一代中文大模型豆包 4.5，在中文理解、生成、推理等全面超越 GPT-4，同时 API 价格仅为 GPT-4 的 1/4，性价比提升 300%。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">xAI</span>
+                    <time>12:30</time>
+                </div>
+                <h2 class="news-title">Grok 3 发布，实时接入 X/Twitter 数据，实时分析能力大幅增强</h2>
+                <p class="news-description">马斯克旗下 xAI 发布 Grok 3 大模型，实现与 X/Twitter 平台数据实时对接，可提供最新的热点事件分析、趋势预测，实时信息处理能力领先行业。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">智源研究院</span>
+                    <time>09:00</time>
+                </div>
+                <h2 class="news-title">悟道 4.0 开源，千亿参数中文大模型完全开放商用</h2>
+                <p class="news-description">智源研究院正式开源悟道 4.0 千亿参数中文大模型，支持完全商业使用，在中文文化理解、知识问答等方面表现优异，为国内企业提供了自主可控的大模型选择。</p>
+            </div>
+
+            <div class="news-card">
+                <div class="news-meta">
+                    <span class="news-source">英伟达</span>
+                    <time>15:00</time>
+                </div>
+                <h2 class="news-title">英伟达 GB200 芯片开始量产，月产能达 5 万块，AI 芯片供应大幅改善</h2>
+                <p class="news-description">英伟达宣布下一代 AI 芯片 GB200 已开始大规模量产，月产能达到 5 万块，性能是 H100 的 4 倍，将有效缓解全球 AI 芯片供应紧张局面。</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2026 AI 新闻站 · 每日更新最新 AI 行业动态</p>
+        </footer>
+    </div>
+
+    <script>
+        function searchNews() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const grid = document.getElementById('newsGrid');
+            const cards = grid.getElementsByClassName('news-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByClassName('news-title')[0];
+                const description = cards[i].getElementsByClassName('news-description')[0];
+                const source = cards[i].getElementsByClassName('news-source')[0];
+                
+                const titleText = title.textContent || title.innerText;
+                const descText = description.textContent || description.innerText;
+                const sourceText = source.textContent || source.innerText;
+                
+                if (titleText.toUpperCase().indexOf(filter) > -1 || 
+                    descText.toUpperCase().indexOf(filter) > -1 ||
+                    sourceText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
